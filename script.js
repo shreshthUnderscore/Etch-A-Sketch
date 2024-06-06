@@ -9,10 +9,6 @@ for(var i=0; i < 16; i++)
         this.classList.add("gridDivHover");
     });
 
-    div.addEventListener("mouseleave", function() {
-        this.classList.remove("gridDivHover");
-    });
-
     containerDivEle.appendChild(div);
 }
 
