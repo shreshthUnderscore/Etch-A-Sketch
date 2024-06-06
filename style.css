@@ -1,0 +1,28 @@
+body
+{
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.containerDiv
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gridDiv
+{
+    flex: 1;
+    flex-basis: calc(25% - 2px);
+    margin: 0px;
+    background-color: red;
+    border: 1px solid black;
+    height: calc(100vh/4 - 2px);
+}
+
+.gridDivHover
+{
+    background-color: darkred;
+}
