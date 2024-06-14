@@ -1,8 +1,21 @@
 var gridRow = 4;
+const colours = [
+    "Red",
+    "Green",
+    "Blue",
+    "Yellow",
+    "Orange",
+    "Purple",
+    "Pink",
+    "Brown",
+    "Gray",
+    "Turquoise"
+];
 
 const containerDivEle = document.querySelector(".containerDiv");
 const sizeButtonEle = document.querySelector(".size-button");
 const resetButtonEle = document.querySelector(".reset-button");
+
 
 function createGrid(size)
 {
@@ -18,7 +31,9 @@ function createGrid(size)
             div.setAttribute("class", "gridDiv")
         
             div.addEventListener("mouseenter", function() {
-                this.classList.add("gridDivHover");
+                var opacity = parseFloat(this.style.opacity) || 1;
+                this.style.backgroundColor = colours[Math.floor(Math.random() * 10)];
+                this.style.opacity = opacity - 0.1;
             });
         
             newDiv.appendChild(div);
